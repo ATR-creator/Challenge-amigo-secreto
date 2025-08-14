@@ -13,6 +13,7 @@ function asignar_texto_elemento(elemento, texto) {
 };
 
 function agregar_amigo() {
+    asignar_texto_elemento("#resultado","");
     nombre = document.querySelector("#amigo").value;
     if (nombre == "") {
         alert("Inserte un valor válido...");
@@ -30,6 +31,7 @@ function limpiar_caja() {
 function sortear_amigo() {
     document.querySelector("#amigo").value = "";
     if (nombres.length == 0) {
+        asignar_texto_elemento("#resultado","");
         alert("Inserte al menos un valor");
     } else {
         let sorteado = Math.floor(Math.random()*nombres.length);
